@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=".NET Custom Development | Custom Software Development | Full stack Development">
+  <meta name="keywords" content=".NET Custom Software Development">
+  <meta name="author" content="elemis">
+  <title>Life at Acelucid</title>
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/plugins.css">
+  <link rel="stylesheet" href="assets/css/style.css"><link rel="preload" href="assets/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+  
+       .navbar-brand {
+           font-weight: bold;
+       }
+       .hero-section {
+           position: relative;
+           text-align: center;
+           color: white;
+       }
+       .hero-section img {
+           width: 100%;
+           height: auto;
+       }
+       .hero-section .hero-text {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+       }
+       .hero-section h1 {
+           font-size: 3rem;
+           margin-bottom: 20px;
+       }
+       .hero-section p {
+           font-size: 1.5rem;
+       }
+       .feature-icon {
+           font-size: 3rem;
+           color: #007bff;
+       }
+       .event-img {
+           width: 100%;
+           height: auto;
+       }
+       
+       .section-title {
+           font-size: 2.5rem;
+           margin-bottom: 30px;
+           text-align: center;
+       }
+       .card-title {
+           font-size: 1.25rem;
+           font-weight: bold;
+       }
+       .card-text {
+           font-size: 1rem;
+       }
+       .feature-icon {
+           font-size: 3rem;
+           color: #007bff;
+           margin-bottom: 20px;
+       }
+       .values-section h4 {
+           font-size: 1.5rem;
+           margin-top: 20px;
+       }
+       .values-section p {
+           font-size: 1rem;
+       }
+       .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .award-img {
+        width: 100%;
+        height: auto;
+    }
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+    }
+            .hover-text {
+                color: red;
+                text-align: center;
+            }
+            .award-wrapper {
+                position: relative;
+                overflow: hidden;
+            }
+            .award-wrapper img {
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: opacity 0.3s ease;
+            }
+            .award-wrapper::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .award-wrapper:hover::after {
+                opacity: 1;
+            }
+            .award-wrapper[data-prize="iphone"]::after {
+                background-image: url('https://placehold.co/600x400?text=iPhone+Prize');
+            }
+            .award-wrapper[data-prize="macbook"]::after {
+                background-image: url('https://placehold.co/600x400?text=MacBook+Prize');
+            }
+            .award-wrapper[data-prize="trip"]::after {
+                background-image: url('https://placehold.co/600x400?text=Trip+Prize');
+            }
+            .award-wrapper[data-prize="watch"]::after {
+                background-image: url('https://placehold.co/600x400?text=Watch+Prize');
+            }
+            .award-wrapper[data-prize="tablet"]::after {
+                background-image: url('https://placehold.co/600x400?text=Tablet+Prize');
+            }
+            .award-wrapper[data-prize="giftcard"]::after {
+                background-image: url('https://placehold.co/600x400?text=Gift+Card+Prize');
+            }
+            * {
+              font-family: "Montserrat", sans-serif !important;
+      
+      
+          }
+      
+          @media only screen and (max-width: 600px) {
+              
+              .bttn{
+                  margin-top:-150px !important;
+              }
+              
+              .tabcontent{
+          
+          max-height:380px;
+      }
+              
+              .mob-view{
+                  text-align:center !important;
+              }
+              
+              .wid{
+                  min-width:450px !important;
+              }
+              
+              .leader{
+                  margin-top:-160px;
+                  margin-left:80px;
+              }
+              
+              .leader span{
+              font-size:12px;
+              }
+              
+              .leader h3{
+                  font-size:14px;
+              }
+              
+              .leader p{
+                  font-size:10px;
+              }
+              
+              
+      .leaderimg{ 
+      margin-top:50px;
+      
+      }        
+              
+              .con-right{
+                  
+                  max-width:480px;
+              }
+              
+              .mv{
+                  flex-direction:column;
+              }
+              
+              .left-hidden{
+                  display:none !important;
+              }
+              
+              .flex-grow button{
+                  font-size:12px !important;
+                  font-weight:bold;
+              }
+              
+              .video-container {
+                  min-height: 80vh
+              }
+              
+              
+      
+              .image-section {
+                  top: 50%;
+                  max-width: 200px;
+              }
+      
+              .text-section {
+                  min-width: 80%;
+                  top: 50%;
+                  left: 5px;
+      
+              }
+      
+              .text-section p {
+                  font-size: 10px;
+              }
+      
+              .image-section {
+                  display: none
+              }
+      
+              /************************ */
+      
+              .techn {
+      
+                  display: flex;
+                  flex-direction: column
+              }
+      
+              .techn img {
+                  max-width: 50%;
+                  margin: 0px auto
+              }
+      
+      
+          }
+      
+          .video-container {
+              width: 100%;
+              max-height: 90vh;
+              /* Adjust the maximum height */
+              /*background: #000c15;*/
+              position: relative;
+              overflow: hidden;
+              /* Ensure overflow doesn't overlap */
+              border-bottom:10px solid #dd2f0d;
+              border-bottom-right-radius:250px;
+              border-bottom-left-radius:0px;
+          }
+      
+          .video2 {
+              width: 100%;
+              height: 100vh;
+              /* Change to auto to maintain aspect ratio */
+              opacity: 9;
+              object-fit: cover;
+          }
+      
+          .video-container::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, rgba(0, 2, 6, 0.8) 14%, rgba(6, 133, 168, 0) 100%);
+          }
+      
+          .text-section {
+              /*width: 40%;*/
+              position: absolute;
+              top: 50%;
+              left: 5%;
+              /* Adjust as needed */
+              transform: translateY(-45%);
+              /* Adjust background color and opacity */
+              padding: 20px;
+          }
+      
+          .image-section {
+              position: absolute;
+              display: none;
+              top: 50%;
+              width: 650px;
+              transform: translateY(-50%);
+              right: 5%;
+          }
+      
+          .image-section img {
+              animation: moveUpDown 2s ease-in-out infinite;
+              /* Adjust timing and animation behavior as needed */
+          }
+      
+          @keyframes moveUpDown {
+              0% {
+                  transform: translateY(0);
+              }
+      
+              50% {
+                  transform: translateY(-20px);
+                  /* Move up */
+              }
+      
+              100% {
+                  transform: translateY(0);
+                  /* Move down to initial position */
+              }
+          }
+          .typewriter-text {
+            font-weight: bold;
+            display: inline-block;
+            min-width: 100px;
+            animation: blinkCursor 2.75s steps(1) infinite;
+        }
+    
+ </style>
+ </head>
+<body>
+ 
+
+
+    
+</div>
+ <div class="content-wrapper">  <header class="wrapper bg-soft-primary">
+    <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+      <div class="container flex-lg-row flex-nowrap align-items-center">
+        <div class="navbar-brand w-100">
+          <a href="index.html"> <img src="assets/img/logo.svg" srcset="./assets/img/logo.svg 2x" alt="" width="200" />
+          </a>
+        </div>
+        <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+          <div class="offcanvas-header d-lg-none">
+            <h3 class="text-white fs-30 mb-0">Acelucid</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+            <ul class="navbar-nav">
+              
+              <li class="nav-item dropdown dropdown-mega">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Industries</a>
+                <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+                <li class="mega-menu-content">
+                  <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled text-center">
+           <li class="col"><a class="dropdown-item" href="https://acelucid.com/logistic-and-transpotation.html">
+                        <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/9.svg" width="64" height="64" alt=""></div>
+                        <span>Logistics & Supply Chain</span>
+                      </a>
+                    </li>
+         <li class="col"><a class="dropdown-item" href="https://acelucid.com/healthcare.html">
+                            <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/2.svg" width="64" height="64" alt=""></div>
+                        <span>Healthcare</span>
+                      </a>
+                    </li>
+            
+                    <li class="col"><a class="dropdown-item" href="https://acelucid.com/education.html">
+                        <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/7.svg" width="64" height="64" alt=""></div>
+                        <span>Education</span>
+                      </a>
+                    </li>
+                    <li class="col"><a class="dropdown-item" href="https://acelucid.com/finance-and-banking.html">
+                           <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/3.svg" width="64" height="64" alt=""></div>
+                        <span>Finance</span>
+                      </a>
+                    </li>
+         <li class="col"><a class="dropdown-item" href="https://acelucid.com/ecommerce.html">
+                             <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/1.svg" width="64" height="64" alt=""></div>
+                        <span>Retail & E-commerce</span>
+                      </a>
+                    </li>    
+                           
+                   
+                  </ul>
+                  <!--/.row -->
+                 </li>
+                <!--/.mega-menu-content-->
+              </ul>
+                <!--/.dropdown-menu -->
+                </li>
+            <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Solutions</a>
+                <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+                  <li class="mega-menu-content">
+                    <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled  text-center">
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/artificial-Intelligence-and-machine-learning.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0 text-white" src="assets/img/demos/1.svg" width="64" height="64" alt=""></div>
+                          <span>AI & ML</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/cloud-computing.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/2.svg" width="64" height="64" alt=""></div>
+                          <span>Cloud Computing</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/blockchain.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/3.svg" width="64" height="64" alt=""></div>
+                          <span>Blockchain</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/internet-of-things.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/4.svg" width="64" height="64" alt=""></div>
+                          <span>Internet of Things</span>
+                        </a>
+                      </li>
+             <li class="col"><a class="dropdown-item" href="https://acelucid.com/augmented-reality-and-virtual-reality.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/5.svg" width="64" height="64" alt=""></div>
+                          <span>AR/VR</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/cybersecurity.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/6.svg" width="64" height="64" alt=""></div>
+                          <span>Cybersecurity</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/devops.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/7.svg" width="64" height="64" alt=""></div>
+                          <span>DevOps</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/web-development.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/8.svg" width="64" height="64" alt=""></div>
+                          <span>Web Development</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/mobile-development.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/9.svg" width="64" height="64" alt=""></div>
+                          <span>Mobile Development</span>
+                        </a>
+                      </li>
+                   <li class="col"><a class="dropdown-item" href="https://acelucid.com/minimum-viable-product.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/10.svg" width="64" height="64" alt=""></div>
+                          <span>MVP Development</span>
+                        </a>
+                      </li>
+                   <li class="col"><a class="dropdown-item" href="https://acelucid.com/project-management-expertise.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/demos/11.svg" width="64" height="64" alt=""></div>
+                          <span>Project Management Expert</span>
+                        </a>
+                      </li>
+                  
+                   
+                    </ul>
+                    <!--/.row -->
+                  </li>
+                  <!--/.mega-menu-content-->
+                </ul>
+                <!--/.dropdown-menu -->
+              </li>
+             <li class="nav-item">
+                <a class="nav-link" href="https://acelucid.com/ourwork.html" >Our Work</a>               
+                <!--/.dropdown-menu -->
+              </li>             
+          
+    
+          <li class="nav-item"> <a class="nav-link" href="https://acelucid.com/staff-augmentation.html" >Hire Devs</a>      </li>
+          <li class="nav-item"> <a class="nav-link" href="https://acelucid.com/blogs.html" >Blogs</a>  
+        <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About us</a>
+                <ul class="dropdown-menu mega-menu">
+                  <li class="mega-menu-content">
+                    <div class="row gx-0 gx-lg-3">
+                      <div class="col-lg-4">
+                        <h6 class="dropdown-header"><a class="text-primary" href="https://acelucid.com/about.html">About Acelucid</a></h6>
+                      <ul class="list-unstyled cc-2 pb-lg-1">
+                          <li><a class="dropdown-item" href="https://acelucid.com/what-we-do.html">What We Do</a></li>
+            <li><a class="dropdown-item" href="https://acelucid.com/about.html#core-value">Core Values</a></li>
+                          <li><a class="dropdown-item" href="https://acelucid.com/about.html#our-mission">Our Mission</a></li>
+                          <li><a class="dropdown-item" href="https://acelucid.com/about.html#our-team">Our Team</a></li>
+                          <li><a class="dropdown-item" href="https://acelucid.com/index.html#testimonial">Testimonials</a></li>
+                          <li><a class="dropdown-item" href="https://acelucid.com/contact.html">Contact Us</a></li>
+                        </ul>
+                         <h6 class="dropdown-header mt-lg-6"><a class="text-primary" href="about.html">Our Culture</a></h6>
+                        <ul class="list-unstyled cc-2">
+                          <li><a class="dropdown-item" href="https://acelucid.com/why-choose-us.html">Why Choose Us</a></li>
+                          <li><a class="dropdown-item" href="https://acelucid.com/how-we-do-it.html">How We Do It</a></li><li><a class="dropdown-item" href="https://acelucid.com/life-acelucid.html">Life at Acelucid</a></li>
+            <li><a class="dropdown-item" href="https://acelucid.com/career.php">Career</a></li>
+              
+                        </ul>
+                      </div>
+                      <!--/column -->
+                      <div class="col-lg-8">
+                        <h6 class="dropdown-header"><a class="text-primary" href="https://acelucid.com/services.html">Services</a></h6>
+                        <ul class="list-unstyled cc-3">
+                          <li><a class="dropdown-item" href="https://acelucid.com/services.html#Custom">Custom Software Development</a></li>
+                           <li><a class="dropdown-item" href="https://acelucid.com/services.html#Digital">Digital Transformation Consulting</a></li>
+                          <li><a class="dropdown-item" href="https://acelucid.com/services.html#Quality">Quality Assurance & Testing</a></li>
+                        <li><a class="dropdown-item" href="https://acelucid.com/services.html#Emerging">Emerging Technologies</a></li>
+                      
+                        </ul>
+            
+                      
+                      </div>
+                      <!--/column -->
+                    </div>
+                    <!--/.row -->
+                  </li>
+                  <!--/.mega-menu-content-->
+                </ul>
+                <!--/.dropdown-menu -->
+              </li>
+        
+            </ul>
+            <!-- /.navbar-nav -->
+            <div class="offcanvas-footer d-lg-none">
+              <div>
+                <a href="mailto:hello@acelucid.com" class="link-inverse"><span >hello@acelucid.com</span></a>
+                <br />+91 7338084881 <br /> <nav class="nav social social-white mt-4">
+                  <a href="https://www.linkedin.com/company/acelucid/"><i class="uil uil-linkedin"></i></a>
+                  <a href="mailto:hello@acelucid.com"><i class="uil uil-google"></i></a>
+                </nav>
+                <!-- /.social -->
+              </div>
+            </div>
+            <!-- /.offcanvas-footer -->
+          </div>
+          <!-- /.offcanvas-body -->
+        </div>
+        <!-- /.navbar-collapse -->
+        <div class="navbar-other w-100 d-flex ms-auto">
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+           
+            <li class="nav-item d-none d-md-block">
+              <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <button class="hamburger offcanvas-nav-btn"><span></span></button>
+            </li>
+          </ul>
+          <!-- /.navbar-nav -->
+        </div>
+        <!-- /.navbar-other -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+       <a class="nav-link" href="#about">
+        About Us
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#work">
+        A Great Place to Work
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#events">
+        Events
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#balance">
+        Corporate and Social Life Balance
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#culture">
+        Our Culture and Values
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#rewards">
+        Rewards
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+  <section class="hero-section">
+    <div class="video-container">
+      <video class="video2" autoplay="" loop="" muted="" playsinline="">
+          <source src="assets/s25.mp4" type="video/mp4">
+      </video>
+      <!-- <div class="overlay"></div> Black overlay -->
+  
+     <div class="text-section">
+         <div class="ani" style="color:white;font-size:2.5em">
+  <span style="font-size:35px">Great teams build great things a</span>
+  <span id="dynamic-text" class="typewriter-text">SUCCESS</span>
+  </div>
+  </div>
+   
+   
+  </section>
+  <footer class="bg-dark text-inverse">
+    <div class="container py-13 py-md-15">
+       <div class="row gy-6 gy-lg-0">
+         <div class="col-md-4 col-lg-3">
+           <div class="widget">
+             <img class="mb-4" src="assets/img/logo-white.svg" srcset="./assets/img/logo-white.svg 2x" alt="" width="200"/>
+         <p>Go beyond conventional boundaries by pioneering value-driven business innovations rooted in our adaptable digital ecosystems, creative designs, and sustainable technological solutions.</p>
+         <p><i class="uil uil-envelope"></i>&nbsp;hello@acelucid.com</p>
+         <p><i class="uil uil-phone"></i>&nbsp;+91 7338084881</p> <nav class="nav social social-white">
+               <a href="https://www.linkedin.com/company/acelucid/" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+               <a href="mailto:hello@acelucid.com" target="_blank"><i class="uil uil-google"></i></a>
+         <a href="https://www.instagram.com/official_acelucid/" target="_blank"><i class="uil uil-instagram"></i></a>
+                </nav>
+             <!-- /.social -->
+           </div>
+           <!-- /.widget -->
+         </div>
+         <!-- /column -->
+         <div class="col-md-4 col-lg-3">
+           <div class="widget">
+             <h4 class="widget-title text-white mb-3">Solutions</h4>
+             <ul class="list-unstyled  mb-0">
+               <li><a href="https://acelucid.com/minimum-viable-product.html">MVP Development</a></li>
+               <li><a href="https://acelucid.com/logistic-and-transpotation.html">Software Development</a></li>
+               <li><a href="https://acelucid.com/web-development.html">Web App</a></li>
+               <li><a href="https://acelucid.com/mobile-development.html">Mobile</a></li>
+               <li><a href="https://acelucid.com/blockchain.html">Blockchain</a></li>
+                <li><a href="https://acelucid.com/what-we-do.html">Ui & Ux</a></li>
+                <li><a href="https://acelucid.com/devops.html">DevOps Engineering</a></li>
+                <li><a href="https://acelucid.com/ecommerce.html">eCommerce</a></li>
+                <li><a href="https://acelucid.com/staff-augmentation.html">Dedicated development team</a></li>
+                <li><a href="https://acelucid.com/artificial-Intelligence-and-machine-learning.html">AI & ML</a></li>
+               <li><a href="https://acelucid.com/cybersecurity.html">Cyber Security</a></li>
+             </ul>
+       </div>
+           <!-- /.widget -->
+         </div>
+         <!-- /column -->
+         <div class="col-md-4 col-lg-3">
+           <div class="widget">
+             <h4 class="widget-title text-white mb-3">Technologies</h4>
+             <ul class="list-unstyled  mb-0">
+               <li><a href="https://acelucid.com/what-we-do.html">AngularJS</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">React</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Vue.js</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Node.js</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Python</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Dot Net</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Laravel</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">RoR</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Golang</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Java</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Android</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">iOS</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">Flutter</a></li>
+               <li><a href="https://acelucid.com/what-we-do.html">React Native</a></li>
+             </ul>
+           </div>
+           <!-- /.widget -->
+         </div>
+         <div class="col-md-12 col-lg-3">
+           <div class="widget">
+             <h4 class="widget-title text-white mb-3">Let's Connect Now</h4>
+             <p class="mb-5">Trusted for upgrades & resilient software development. 98% tech leader approval. Long-term clients.</p>
+             <div class="newsletter-wrapper">
+               <!-- Begin Mailchimp Signup Form -->
+            <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect</a>
+               <!--End mc_embed_signup-->
+             </div>
+             <!-- /.newsletter-wrapper -->
+           </div>
+           <!-- /.widget -->
+            <div class="widget">
+             <h4 class="widget-title text-white mb-3">About Us</h4>
+             <ul class="list-unstyled  mb-0">
+               <li><a href="about.html">Company</a></li>
+            
+               <li><a href="https://acelucid.com/#testimonial">Testimonial</a></li>
+               <li><a href="#">Terms of Use</a></li>
+               <li><a href="https://acelucid.com/privacy-policy.html">Privacy Policy</a></li>
+               <li><a href="https://acelucid.com/contact.html">Contact Us</a></li>
+             </ul>
+           </div>
+         </div>
+         <!-- /column -->
+         <div class="col-md-4 col-lg-3">
+        
+           <!-- /.widget -->
+     
+         </div>
+         <!-- /column -->
+     
+         <!-- /column -->
+       </div>
+       <!--/.row -->
+       <p class="mb-4">Copyright © 2019-2024 Acelucid Technologies Private Limited. All rights reserved.</p>
+     </div>
+     <!-- /.container -->
+   </footer><!--Start of Tawk.to Script (0.7.2)-->
+ <script id="tawk-script" type="text/javascript">
+ var Tawk_API = Tawk_API || {};
+ var Tawk_LoadStart=new Date();
+ (function(){
+   var s1 = document.createElement( 'script' ),s0=document.getElementsByTagName( 'script' )[0];
+   s1.async = true;
+   s1.src = 'https://embed.tawk.to/5ff6efdea9a34e36b969f85b/1ere9i07s';
+   s1.charset = 'UTF-8';
+   s1.setAttribute( 'crossorigin','*' );
+   s0.parentNode.insertBefore( s1, s0 );
+ })();
+ </script>
+ <!--End of Tawk.to Script (0.7.2)-->
+   <div class="progress-wrap">
+     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+     </svg>
+   </div>
+   <script src="assets/js/plugins.js"></script>
+   <script src="assets/js/theme.js"></script>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script>	
+   $("form#connect").submit(function(e) {
+   //	alert("hi");
+   $('#subbutt').attr('disabled', true);
+       let msgcheck =	$('#message').val();
+     if(msgcheck == ''){
+       alert("Enter message");
+       return;
+     }
+   e.preventDefault(); var formData = new FormData(this);
+     var furl = window.location.href;
+     formData.append('url',furl);   
+  $.ajax({
+         url: 'service/email/mail.php',
+         type: 'POST',
+         data: formData,
+       success: function (data) {
+       //alert(data);
+       //if(data==="done"){
+         
+   alert("Thank You!! We will contact you.");
+     window.location.reload();		
+ 
+  return; //}		   
+ if(data==="already"){
+ alert("Application Already Submitted!");
+ return; 
+ }		
+  },
+         cache: false,
+         contentType: false,
+         processData: false
+     });
+ });
+ 
+   </script>
+  
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                  const word1 = document.getElementById('word1');
+                  const word2 = document.getElementById('word2');
+                  const word3 = document.getElementById('word3');
+              
+                  word1.style.animation = 'none';
+                  word2.style.animation = 'none';
+                  word3.style.animation = 'none';
+              
+                  setTimeout(() => {
+                      word1.style.animation = '';
+                  }, 500); // Delay for the first word
+              
+                  setTimeout(() => {
+                      word2.style.animation = '';
+                  }, 4000); // Additional delay for the second word
+              
+                  setTimeout(() => {
+                      word3.style.animation = '';
+                  }, 7500); // Additional delay for the third word
+              });
+              
+              /**
+              This code was not writen by me
+              */
+              var TxtType = function (el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = "";
+                this.tick();
+                this.isDeleting = false;
+              };
+              
+              TxtType.prototype.tick = function () {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+              
+                if (this.isDeleting) {
+                  this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                  this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+              
+                this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+              
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+              
+                if (this.isDeleting) {
+                  delta /= 2;
+                }
+              
+                if (!this.isDeleting && this.txt === fullTxt) {
+                  delta = this.period;
+                  this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === "") {
+                  this.isDeleting = false;
+                  this.loopNum++;
+                  delta = 500;
+                }
+              
+                setTimeout(function () {
+                  that.tick();
+                }, delta);
+              };
+              
+              const words = ['BEGINNING', 'PROGRESS', 'SUCCESS'];
+              let index = 0;
+              
+              function typeWord(word) {
+                  const dynamicText = document.getElementById('dynamic-text');
+                  let i = 0;
+                  dynamicText.textContent = '';
+              
+                  const typing = setInterval(() => {
+                      if (i < word.length) {
+                          dynamicText.textContent += word.charAt(i);
+                          i++;
+                      } else {
+                          clearInterval(typing);
+                          setTimeout(() => {
+                              if (index === words.length - 1) {
+                                  index = 0; // Reset to loop
+                              } else {
+                                  index++;
+                              }
+                              typeWord(words[index]); // Start next word
+                          }, 2000); // Wait before starting next word
+                      }
+                  }, 150); // Speed of typing each character
+              }
+              
+              document.addEventListener('DOMContentLoaded', () => {
+                  typeWord(words[index]);
+              });
+              
+              
+              
+              </script>
+            
+
+  
+ 
+ </body>
+</html>
