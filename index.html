@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,64 +9,53 @@
   <link rel="shortcut icon" href="assets/img/">
   <link rel="stylesheet" href="assets/css/plugins.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel='stylesheet' href='team/style.css' type='text/css' media='all' />  
+	<script type='text/javascript' src='team/modernizr-2.5.3.min.js'></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+    @keyframes marquee-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    .marquee-content {
+        display: flex;
+        width: 200%; /* Double the width to create seamless effect */
+        animation: marquee-left 20s linear infinite;
+    }
+    .marquee-content a {
+        flex: 0 0 auto;
+        margin-right: 1rem; /* Add spacing between items */
+    }
+    .group:hover .marquee-content {
+        animation-play-state: paused;
+    }
+    .marquee-content a {
+flex: 0 0 300px; /* Set a fixed width */
+height: 100px; /* Set a fixed height */
 
-	  <style>
-      
-    h1 {		
-	 	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font: {
-		size: 20vw;
-		family: 'Poppins', sans-serif;
-	};  
-		}
-		  html {
-  height:100%;
+display: flex;
+
+
+
+background: #1f2937; /* Tailwind gray-800 */
+border-radius: 10px;
+padding: 10px;
+}
+.marquee-content a img {
+width: 70px; /* Adjust size */
+height: 70px;
+object-fit: cover;
 }
 
-body {
-  margin:0;
-}
-
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-20deg, #f5f6fa 50%, #fff 50%);
-  bottom:0;
-  left:-100%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
-
-.bg3 {
-  animation-duration:5s;
-}
-
-
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
-    </style>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</style>
 </head>
 
+
 <body>
-  <div class="content-wrapper">
-     <header class="wrapper bg-soft-primary">
+  <div class="content-wrapper">  <header class="wrapper bg-soft-primary">
       <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
@@ -83,44 +70,44 @@ body {
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav">
               
-               	 <li class="nav-item dropdown dropdown-mega">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Industries</a>
-                    <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
-                    <li class="mega-menu-content">
-                      <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled text-center">
-						   <li class="col"><a class="dropdown-item" href="https://acelucid.com/logistic-and-transpotation.html">
-                            <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/9.svg" width="64" height="64" alt=""></div>
-                            <span>Logistics & Supply Chain</span>
-                          </a>
-                        </li>
-						 <li class="col"><a class="dropdown-item" href="https://acelucid.com/healthcare.html">
-                                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/2.svg" width="64" height="64" alt=""></div>
-                            <span>Healthcare</span>
-                          </a>
-                        </li>
-						    
-                        <li class="col"><a class="dropdown-item" href="https://acelucid.com/education.html">
-                            <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/7.svg" width="64" height="64" alt=""></div>
-                            <span>Education</span>
-                          </a>
-                        </li>
-                        <li class="col"><a class="dropdown-item" href="https://acelucid.com/finance-and-banking.html">
-                               <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/3.svg" width="64" height="64" alt=""></div>
-                            <span>Finance</span>
-                          </a>
-                        </li>
-						 <li class="col"><a class="dropdown-item" href="https://acelucid.com/ecommerce.html">
-                                 <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/1.svg" width="64" height="64" alt=""></div>
-                            <span>Retail & E-commerce</span>
-                          </a>
-                        </li>    
-						                   
-                       
-                      </ul>
-                      <!--/.row -->
-                     </li>
-                    <!--/.mega-menu-content-->
-                  </ul>
+                <li class="nav-item dropdown dropdown-mega">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Industries</a>
+                  <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+                  <li class="mega-menu-content">
+                    <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled text-center">
+             <li class="col"><a class="dropdown-item" href="https://acelucid.com/logistic-and-transpotation.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/9.svg" width="64" height="64" alt=""></div>
+                          <span>Logistics & Supply Chain</span>
+                        </a>
+                      </li>
+           <li class="col"><a class="dropdown-item" href="https://acelucid.com/healthcare.html">
+                              <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/2.svg" width="64" height="64" alt=""></div>
+                          <span>Healthcare</span>
+                        </a>
+                      </li>
+              
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/education.html">
+                          <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/7.svg" width="64" height="64" alt=""></div>
+                          <span>Education</span>
+                        </a>
+                      </li>
+                      <li class="col"><a class="dropdown-item" href="https://acelucid.com/finance-and-banking.html">
+                             <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/3.svg" width="64" height="64" alt=""></div>
+                          <span>Finance</span>
+                        </a>
+                      </li>
+           <li class="col"><a class="dropdown-item" href="https://acelucid.com/ecommerce.html">
+                               <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2"><img class="rounded-0" src="assets/img/industries/1.svg" width="64" height="64" alt=""></div>
+                          <span>Retail & E-commerce</span>
+                        </a>
+                      </li>    
+                             
+                     
+                    </ul>
+                    <!--/.row -->
+                   </li>
+                  <!--/.mega-menu-content-->
+                </ul>
                   <!--/.dropdown-menu -->
                   </li>
 				      <li class="nav-item dropdown dropdown-mega">
@@ -198,7 +185,7 @@ body {
                 </li>             
             
 			
-				    <li class="nav-item"> <a class="nav-link" href="https://acelucid.com/staff-augmentation.html" >Hire Devs</a>        </li>
+				    <li class="nav-item"> <a class="nav-link" href="https://acelucid.com/staff-augmentation.html" >Hire Devs</a>      </li>
             <li class="nav-item"> <a class="nav-link" href="https://acelucid.com/blogs.html" >Blogs</a>  
 				  <li class="nav-item dropdown dropdown-mega">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About us</a>
@@ -218,8 +205,7 @@ body {
                            <h6 class="dropdown-header mt-lg-6"><a class="text-primary" href="about.html">Our Culture</a></h6>
                           <ul class="list-unstyled cc-2">
                             <li><a class="dropdown-item" href="https://acelucid.com/why-choose-us.html">Why Choose Us</a></li>
-                            <li><a class="dropdown-item" href="https://acelucid.com/how-we-do-it.html">How We Do It</a></li>
-							  <li><a class="dropdown-item" href="https://acelucid.com/life-acelucid.html">Life at Acelucid</a></li>
+                            <li><a class="dropdown-item" href="https://acelucid.com/how-we-do-it.html">How We Do It</a></li><li><a class="dropdown-item" href="https://acelucid.com/life-acelucid.html">Life at Acelucid</a></li>
 							<li><a class="dropdown-item" href="https://acelucid.com/career.php">Career</a></li>
 							  
                           </ul>
@@ -288,8 +274,7 @@ body {
             <div class="modal-body">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               <h2 class="mb-3 text-start text-primary">Let's Connect</h2>
-              <p class="lead mb-6 text-start">It takes less than a minute.</p>
-              <form class="text-start mb-3" action="#" id="connect" method="post">
+              <p class="lead mb-6 text-start">It takes less than a minute.</p>    <form class="text-start mb-3" action="#" id="connect" method="post">
                 <div class="form-floating mb-4">
                   <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Name">
                   <label for="loginName">Name</label>
@@ -324,498 +309,347 @@ body {
       <!--/.modal -->
     </header>
     <!-- /header -->
- <section class="wrapper bg-light">
-
-  <div class="container pt-10 pt-md-14 pb-14 pb-md-16 text-center">
-	  	 <div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
-    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-xl-0 mb-14 align-items-center">
-      <div class="col-lg-7 order-lg-2">
-        <figure><img class="img-auto" src="./assets/img/photos/main.png" srcset="./assets/img/photos/main.png" alt="" /></figure>
-      </div>
-      <!-- /column -->
-      <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start">
-        <h1 class="display-1 fs-54 mb-5 mx-md-n5 mx-lg-0 mt-7">Empowering Innovation, Engineering Success</h1>
-        <p class="lead fs-lg mb-7">At <span class="text-primary">Acelucid</span>, we blend cutting-edge technology with creative solutions to transform your business <span class="typer text-dark" 
-      data-loop="false" 
-      data-delay="100" 
-      data-words=" challenges into opportunities.">
-</span>
-			<span class="cursor text-dark" data-owner="typer"></span> </p>
-       
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-    <h2 class="text-center mb-8">Official <span class="text-primary">Partners</span></h2>
-    <div class="row row-cols-4 row-cols-md-4 row-cols-lg-7 row-cols-xl-7 gy-10 mb-2 d-flex align-items-center justify-content-center">
-      <div class="col"><img class="img-fluid px-md-3 px-lg-0 px-xl-2 px-xxl-5" src="./assets/img/brands/c1.png" alt="" /></div>
-      <div class="col"><img class="img-fluid px-md-3 px-lg-0 px-xl-2 px-xxl-5" src="./assets/img/brands/c2.png" alt="" /></div>
-      <div class="col"><img class="img-fluid px-md-3 px-lg-0 px-xl-2 px-xxl-5" src="./assets/img/brands/c3.png" alt="" /></div>
-      <div class="col"><img class="img-fluid px-md-3 px-lg-0 px-xl-2 px-xxl-5" src="./assets/img/brands/c4.png" alt="" /></div>
-     
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-  <div class="overflow-hidden">
-	  
-    <div class="divider text-soft-primary mx-n2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="currentColor" d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"/></svg>
-    </div>
-  </div>
-</section>
-<!-- /section -->
-<!-- /section -->
-    <!-- /section -->
-	  
-    <section class="wrapper bg-light mt-10">
-		
-      <div class="container">
-     
+    <section class="wrapper bg-white-900">
+      <div class="container pt-10 pt-md-14 text-center">
+        <div class="row">
+          <div class="col-xl-6 mx-auto">
+            <h1 class="display-2 mb-4">Crafting Tomorrow's Solutions, Today</h1>
+            <p class="lead fs-lg mb-0">Discover the heart of innovation and excellence at Acelucid.</p>
+          </div>
+          <!-- /column -->
+        </div>
         <!-- /.row -->
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center mb-14 mb-md-18">
-          <div class="col-lg-6 position-relative">
-            <div class="shape rounded bg-pale-red rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
-            <div class="row gx-md-5 gy-5 position-relative">
-              <div class="col-6">
-                <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="300" src="assets/img/photos/sa5.jpg" srcset="./assets/img/photos/sa5.jpg" alt="" />
-                <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="600" src="assets/img/photos/sa6.jpg" srcset="./assets/img/photos/sa6.jpg" alt="" />
+      </div>
+      <!-- /.container -->
+      <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;"><img src="assets/img/photos/bg12.jpg" srcset="./assets/img/photos/bg12.jpg" alt="" /></figure>
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light ">
+      <div class="container py-14 py-md-16">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+          <div class="col-lg-6 position-relative order-lg-2">
+            <div class="shape bg-dot primary rellax w-16 h-20" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
+            <div class="overlap-grid overlap-grid-2">
+              <div class="item">
+                <figure class="rounded shadow"><img src="assets/img/photos/about2.jpg" srcset="./assets/img/photos/about2.jpg" alt=""></figure>
               </div>
-              <!-- /column -->
-              <div class="col-6">
-                <img class="img-fluid rounded shadow-lg my-5" data-cue="fadeIn" data-delay="900" src="assets/img/photos/sa7.jpg" srcset="./assets/img/photos/sa7.jpg" alt="" />
-                <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="assets/img/photos/sa8.jpg" srcset="./assets/img/photos/sa8.jpg" alt="" />
+              <div class="item">
+                <figure class="rounded shadow"><img src="assets/img/photos/about3.jpg" srcset="./assets/img/photos/about3.jpg" alt=""></figure>
               </div>
-              <!-- /column -->
             </div>
-            <!-- /.row -->
           </div>
           <!--/column -->
           <div class="col-lg-6">
-			  <h3 class="display-4 mb-5">Grow your <span class="text-primary">business</span> with us</h3>
-            <p class="mb-5">Delivering great digital experiences through high quality design, deployment, and management of websites, our solutions guarantee an accelerated ROI and faster outreach.</p>
-            <div class="row gy-3">
-              <div class="col-xl-6">
-                <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-                  <li><span><i class="uil uil-check"></i></span><span>Hire Full Time Remote Developers</span></li>
-                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Mobile Responsive Websites</span></li>
-                </ul>
-              </div>
-              <!--/column -->
-              <div class="col-xl-6">
-                <ul class="icon-list bullet-bg bullet-soft-red mb-0">
-                  <li><span><i class="uil uil-check"></i></span><span>Experts in Cloud Migration</span></li>
-                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Experts in Frontend, Backend and API Development</span></li>
-				  </ul>
-              </div>
-              <!--/column -->
-            </div>
+            <img src="assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+            <h2 class="display-4 mb-3">Our Story</h2>
+            <p class="mb-6">The story of Acelucid Technologies is one of passion, perseverance, and transformation. It began with a simple yet powerful idea: to leverage the vast potential of technology to solve real-world problems. From our humble beginnings in a small office space, where late-night brainstorming sessions and endless cups of coffee fueled our dreams, to becoming a global leader in digital solutions, our journey has been nothing short of extraordinary.</p>
             <!--/.row -->
           </div>
           <!--/column -->
         </div>
         <!--/.row -->
-        <div class="row align-items-center">
-			
-          <div class="col-lg-12 position-relative order-lg-2">
-          <h3 class="display-4 mb-5"><span class="text-primary">How</span> we do it?</h3>
-			<p>We engineer in agile base methodology for iterative and incremental results to be reviewed by clients at planed milestones, majorly after each iteration cycle of deveolpment.</p>
-			 <img class="img-fluid mx-auto rounded"  src="assets/img/photos/features-top-image.png" srcset="./assets/img/photos/features-top-image.png" alt="" />
-            <!-- /.row -->
+        <div class="row mb-5"  id="core-value">
+          <div class="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
+            <img src="assets/img/icons/lineal/list.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+            <h2 class="display-4 mb-4 px-lg-14">Our Core Values</h2>
+			  <p>We develop and nurture every product as our own, prioritizing close collaboration with each client. From day one, we’re putting our heads together to turn your idea into a meaningful digital product. Our expert team is highly responsive and dedicated to ensuring your success, by providing an all-in approach from developing concepts to launching and supporting the product.</p>
           </div>
-          <!--/column -->
-    
-          <!--/column -->
+          <!-- /column -->
         </div>
-        <!--/.row -->
-    
-        <!--/.row -->
-      </div>
-      <!-- /.container -->
-  
-  <div class="container py-14 py-md-16">
-    <div class="row">
-      <div class="col-md-12 offset-md-1 col-lg-12 offset-lg-2 mx-auto text-center">
-        <h2 class="display-4">From Concept to Completion: <span class="text-primary">Our Full Stack Expertise</span></h2>
-        <p class="mb-10">At acelucid, we ingeniously take your business idea from a mere thought to a fully functional, engaging digital product. As a pioneering software and mobile app development company, our full stack innovative expertise in myriad technologies, agile methods, & DevOps delivers cost-effective front-end, backends, & web solutions that simplify your processes. Build & execute your advanced software initiatives to extend your business capabilities for scalability, flexibility & 10x growth. Opt from our wide spectrum of development focus areas:</p>
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-	 
-    <ul class="nav nav-tabs nav-tabs-bg d-flex justify-content-between nav-justified flex-lg-row flex-column">
-      <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab" href="#tab2-1">
-          <div><img src="./assets/img/icons/lineal/computer.svg" class="svg-inject icon-svg icon-svg-sm text-primary me-4" alt="" /></div>
-          <div>
-            <h4>Software</h4>
-          </div>
-        </a> </li>
-      <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-2">
-          <div><img src="./assets/img/icons/lineal/smartphone.svg" class="svg-inject icon-svg icon-svg-sm text-primary me-4" alt="" /></div>
-          <div>
-            <h4>Mobile</h4>           
-          </div>
-        </a> </li>
-      <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-3">
-          <div><img src="./assets/img/icons/solid/gamepad.svg" class="svg-inject icon-svg icon-svg-xs solid-mono text-primary me-4" alt="" /></div>
-          <div>
-            <h4>QA</h4>
-           </div>
-        </a> </li>
- <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-4">
-          <div><img src="./assets/img/icons/solid/pen-tool.svg" class="svg-inject icon-svg icon-svg-xs solid-mono text-primary me-4" alt="" /></div>
-          <div>
-            <h4>UX/UI</h4>
-           </div>
-        </a> </li>
- <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-5">
-          <div><img src="./assets/img/icons/solid/cloud-network-2.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky me-4" alt="" /></div>
-          <div>
-            <h4>AI/ML</h4>
-           </div>
-        </a> </li>
- <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-6">
-          <div><img src="./assets/img/icons/solid/director.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky me-4" alt="" /></div>
-          <div>
-            <h4>Platform</h4>
-           </div>
-        </a> </li>
-    </ul>
-    <!-- /.nav-tabs -->
-    <div class="tab-content mt-6 mt-lg-8">
-      <div class="tab-pane fade show active" id="tab2-1">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6">
-            <div class="row gx-md-5 gy-5 align-items-center">
-                <img class="img-fluid d-flex ms-auto" src="./assets/img/photos/software.png" srcset="./assets/img/photos/software.png" alt="" />
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h2 class="mb-3">Software <span class="text-primary">Development</span></h2>
-            <p>Our premium software development services are designed to perfectly handle any needs of simple to complex projects of Startups and Enterprises in any domain globally. We bring in our vast technological expertise and the latest techs, creating groundbreaking, scalable, & flexible software solutions to bring your business agility. Outsource our offshore software development services to optimize your business success.</p>
-            <ul class="icon-list bullet-bg bullet-soft-red">
-              <li><i class="uil uil-check"></i>Software Consultation</li>
-              <li><i class="uil uil-check"></i>Software Development Outsourcing</li>
-              <li><i class="uil uil-check"></i>Custom Software Development</li>
-           	  <li><i class="uil uil-check"></i>Software Product Development</li>
-              <li><i class="uil uil-check"></i>Dedicated Developers Or IT Teams</li>
-              <li><i class="uil uil-check"></i>Cloud Apps Development</li>
-              <li><i class="uil uil-check"></i>Legacy Software Upgrades &amp; Migration</li>
-            </ul>
-			    <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect Now</a>
-          
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.tab-pane -->
-      <div class="tab-pane fade" id="tab2-2">
+        <!-- /.row -->
         <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
           <div class="col-lg-6 order-lg-2">
-            <div class="row gx-md-5 gy-5">
-                <img class="img-fluid my-5 d-flex ms-auto" src="./assets/img/photos/devices.png" srcset="./assets/img/photos/devices.png" alt="" />
-              <!-- /column -->
+            <div class="card me-lg-6">
+              <div class="card-body p-6">
+                <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">01</span></span>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">People first</h4>
+                    <p class="mb-0">We please everyone, those who work with us and those we work for as we focus on establishing relationships that would make a positive difference in everyone's lives</p>
+                  </div>
+                </div>
+              </div>
+              <!--/.card-body -->
             </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h2 class="mb-3"><span class="text-primary">Mobile App</span> Development</h2>
-            <p>Creating value across industries, our comprehensive mobile app development lets you take over the moving world with hybrid, user-friendly, feature-rich mobile apps. Our mobile app developers for hire integrate modern techs like IoT, AI, Cloud, Data Analytics, etc. to design distinct mobile apps for iOS, Android, & other OS. Captivate your eager users with your business at their fingertips with our engaging UIs.</p>
-            <ul class="icon-list bullet-bg bullet-soft-red">
-              <li><i class="uil uil-check"></i>Hybrid Mobile Apps</li>
-              <li><i class="uil uil-check"></i>IOS Mobile App Development</li>
-              <li><i class="uil uil-check"></i>Android Mobile App Development</li>
-              <li><i class="uil uil-check"></i>Native Mobile Apps Development</li>
-              <li><i class="uil uil-check"></i>UI/UX Designing</li>
-              <li><i class="uil uil-check"></i>Integrations</li>
-            </ul>
-             <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect Now</a>
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.tab-pane -->
-      <div class="tab-pane fade" id="tab2-3">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6">
-            <div class="row gx-md-5 gy-5">
-           <img class="img-fluid my-5 d-flex ms-auto" src="./assets/img/photos/qa_testing.png" srcset="./assets/img/photos/qa_testing.png"  alt="" />
+            <!--/.card -->
+            <div class="card ms-lg-13 mt-6">
+              <div class="card-body p-6">
+                 <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">03</span></span>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">Embracing Challenges</h4>
+                    <p class="mb-0">To go that extra mile we challenge ourselves to take risks responsibly and ensure our works are the mark of our focused excellence.</p>
+                  </div>
+                </div>
+              </div>
+              <!--/.card-body -->
             </div>
-            <!-- /.row -->
+            <!--/.card -->
+            <div class="card mx-lg-6 mt-6">
+              <div class="card-body p-6">
+               <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">05</span></span>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">Deliver Exceptional Results</h4>
+                    <p class="mb-0">We strongly believe that as we focus on the end user, everything else will follow. Through an iterative approach, we strive to exceed expectations with out focus on the end user.</p>
+                  </div>
+                </div>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
           </div>
           <!--/column -->
-          <div class="col-lg-6">
-            <h2 class="mb-3">QA & <span class="text-primary">Testing</span></h2>
-            <p>We offer a variety of QA & testing services for your every developmental stage and individual needs ensuring uncompromised high quality and consistent performance. Our qualified QA experts and Testers diligently run your mobile, web, and desktop apps & sites, and software through automated and manual testing for troubleshooting bugs & errors for constant functions. Enhance your processes with our flawless digital solutions.</p>
-            <ul class="icon-list bullet-bg bullet-soft-red">
-              <li><i class="uil uil-check"></i>Manual Testing</li>
-              <li><i class="uil uil-check"></i>Automated Testing</li>
-              <li><i class="uil uil-check"></i>QA Outsourcing</li>
-               <li><i class="uil uil-check"></i>Performance & Function Testing</li>
-              <li><i class="uil uil-check"></i>Security Testing</li>
-              <li><i class="uil uil-check"></i>Microservices & API Testing</li>
-              <li><i class="uil uil-check"></i>Troubleshooting</li>
-            </ul>
-         <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect Now</a>
-             </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.tab-pane -->
-     <div class="tab-pane fade" id="tab2-4">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
           <div class="col-lg-6 order-lg-2">
-            <div class="row gx-md-5 gy-5">
-                <img class="img-fluid my-5 d-flex ms-auto" src="./assets/img/photos/ui_ux.png" srcset="./assets/img/photos/ui_ux.png" alt="" />
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h2 class="mb-3"><span class="text-primary">UX/UI</span> Design</h2>
-            <p>Design interactive user interfaces, immersive front-ends, easy-to-navigate dashboards, and more engaging elements that escalate the user experience to the next level. Our UI/UX designers study specific end-user behavior & preferences to outline highly intuitive customer journeys tailored to individual goals. Our UI/UX is a perfect blend of tech trends & creativity that empowers your business image.</p>
-            <ul class="icon-list bullet-bg bullet-soft-red">
-              <li><i class="uil uil-check"></i>Responsive Web App Designs</li>
-              <li><i class="uil uil-check"></i>UI Designs</li>
-              <li><i class="uil uil-check"></i>User Experience Designs</li>
-              <li><i class="uil uil-check"></i>Web App & Sites Redesigning</li>
-              <li><i class="uil uil-check"></i>Product Designs</li>
-              <li><i class="uil uil-check"></i>Prototype & MVP Designs</li>
-              <li><i class="uil uil-check"></i>Design Testing</li>
-            </ul>
-             <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect Now</a>
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-		  <div class="tab-pane fade" id="tab2-5">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6">
-            <div class="row gx-md-5 gy-5 align-items-center">
-                <img class="img-fluid d-flex ms-auto" src="./assets/img/photos/f2.png" srcset="./assets/img/photos/f2.png"  alt="" />
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h2 class="mb-3">Artificial Intelligence &<span class="text-primary"> Machine Learning</span></h2>
-            <p>We bring the endless power of Artificial Intelligence (AI) & Machine Learning to your business to optimize your decision-making with data-driven meaningful actionable insights. Our AI/ML-related services & solutions leverage all types of data, real-time or raw, to boost your business with enhanced analytical abilities, proficient products, and data-driven decisions for a risk-free tomorrow.</p>
-            <ul class="icon-list bullet-bg bullet-soft-red">
-              <li><i class="uil uil-check"></i>Data Analytics</li>
-              <li><i class="uil uil-check"></i>Business Intelligence</li>
-              <li><i class="uil uil-check"></i>AI Development</li>
-           	  <li><i class="uil uil-check"></i>Machine Learning Development</li>
-              <li><i class="uil uil-check"></i>Data Science</li>
-              <li><i class="uil uil-check"></i>Big Data & Data Management</li>
-              <li><i class="uil uil-check"></i>IoT & Generative AI</li>
-            </ul>
-			    <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect Now</a>
-          
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-		  <div class="tab-pane fade" id="tab2-6">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="row gx-md-5 gy-5">
-                <img class="img-fluid my-5 d-flex ms-auto" src="./assets/img/photos/platform.png" srcset="./assets/img/photos/platform.png" alt="" />
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h2 class="mb-3"><span class="text-primary">Platform</span> & Infrastructure</h2>
-            <p>Being an ISO 27001-certified software company, we leverage our 12+ years of industry experience and technological expertise to enable state-of-the-art IT infrastructure and platforms that streamline your various business needs. Besides providing uncompromised security, scalability, & adaptability, we consistently support your digital adventures with security, quality, and affordable creation & maintenance.</p>
-            <ul class="icon-list bullet-bg bullet-soft-red">
-              <li><i class="uil uil-check"></i>IT Support & Maintenance</li>
-              <li><i class="uil uil-check"></i>IT Ecosystem</li>
-				<li><i class="uil uil-check"></i>Cybersecurity</li>
-              <li><i class="uil uil-check"></i>Networking Management Services</li>
-              <li><i class="uil uil-check"></i>Data Management</li>
-              <li><i class="uil uil-check"></i>Cloud Management And Consulting</li>
-             <li><i class="uil uil-check"></i>DevOps Engineering</li>
-            </ul>
-             <a href="#" class="btn btn-sm btn-primary rounded" data-bs-toggle="modal" data-bs-target="#modal-signup">Let's Connect Now</a>
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-		
-	  </div>
-    <!-- /.tab-content -->
-  </div>
-  <!-- /.container -->
-</section>
-<!-- /section -->
-<section class="wrapper" id="testimonial">
-  <div class="container py-14 py-md-16">
-    <div class="row">
-      <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center position-relative">
-        <img src="./assets/img/svg/doodle1.svg" class="h-9 position-absolute d-none d-lg-block" style="top: 2%; left: 9%" alt="">
-        <img src="./assets/img/svg/doodle10.svg" class="h-7 position-absolute d-none d-lg-block" style="top: -45%; left: -17%" alt="">
-        <img src="./assets/img/svg/doodle11.svg" class="h-13 position-absolute d-none d-lg-block" style="top: -40%; right: -15%" alt="">
-        <h2 class="fs-36 text-uppercase text-primary mb-3">Happy Customers</h2>
-        <h3 class="display-4 mb-11 px-xl-10 px-xxl-13">Don't take our word for it. See what <span class="text-primary">customers</span> are saying about us.</h3>
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-    <div class="grid">
-      <div class="row isotope gy-6">
-        <div class="item col-md-6 col-xl-4">
-          <div class="card shadow-none rounded-xl bg-soft-grape">
-            <div class="card-body">
-              <blockquote class="icon mb-0">
-                <p>As CTO at Lumiere32, I had the chance to bring on a MEAN stack developer from Acelucid, and honestly, it was a pretty solid experience. These folks really know their stuff—jumped right into our project with the kind of energy and insight you hope for. Sure, we hit a couple of bumps, but who doesn’t? What mattered more was how the Acelucid team handled it: quick to tackle issues, open in communication, and always focused on keeping things moving forward. If you’re looking for an IT crew that gets the job done, Acelucid’s your bet. Thumbs up from me.</p>
-                <div class="blockquote-details">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Swetank</h5>
-                    <p class="mb-0">CTO, Singapore</p>
+			  
+            <div class="card me-lg-6">
+              <div class="card-body p-6">
+				   <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">02</span></span>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">Passion-Driven</h4>
+                    <p class="mb-0">Fueling success by harnessing our love for what we do for purpose-driven results in every aspect of professional and personal life.</p>
                   </div>
                 </div>
-              </blockquote>
+               
+              </div>
+              <!--/.card-body -->
             </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-        <!--/column -->
-        <div class="item col-md-6 col-xl-4">
-          <div class="card shadow-none rounded-xl bg-soft-green">
-            <div class="card-body">
-              <blockquote class="icon mb-0">
-                <p>Over the couple of years, the application modernization process has produced very great results for us thanks to Acelucid's team's technical execution, skill, and determination to deliver results in a time-based strategy throughout the process. The team's outstanding teamwork and communication abilities have been incredibly beneficial in helping them comprehend our business objectives, which are well-aligned with our IT solutions and growth strategy as a whole. For long-term success, someone looking for a dependable, creative, and responsive IT solution team would be well advised to work with Acelucid Technologies.</p>
-                <div class="blockquote-details">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">John Cotis</h5>
-                    <p class="mb-0">CEO, Australia</p>
+            <!--/.card -->
+            <div class="card ms-lg-13 mt-6">
+              <div class="card-body p-6">
+				   <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">04</span></span>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">Dream Big, Act Fast</h4>
+                    <p class="mb-0">We prioritize the little steps that pave the way to the bigger picture, allowing us to move swiftly and efficiently toward our goals.</p>
                   </div>
                 </div>
-              </blockquote>
+               
+              </div>
+              <!--/.card-body -->
             </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-        <!--/column -->
-        <div class="item col-md-6 col-xl-4">
-          <div class="card shadow-none rounded-xl bg-soft-orange">
-            <div class="card-body">
-              <blockquote class="icon mb-0">
-                <p>I have had the pleasure of working with Abhishek on several different projects over the years. I am grateful for his ability to listen to my needs, fully understand the scope of the project and come up with multiple solutions that fit within my budget and timeframe. Owning and operating a small business is full of ups and downs, but Abhishek and his team always remained a steady presence which gave me peace of mind that the technical solutions implemented would be robust, secure and future compatible.</p>
-                <div class="blockquote-details">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Mike Allen</h5>
-                    <p class="mb-0">CEO, USA</p>
+            <!--/.card -->
+            <div class="card mx-lg-6 mt-6">
+              <div class="card-body p-6">
+                <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">06</span></span>
+                  </div>
+                  <div>
+                    <h4 class="mb-1">Collaborative Learning & Winning</h4>
+                    <p class="mb-0">We give more than we take, sharing everything we learn and leveraging our collective energy and intelligence to achieve success.</p>
                   </div>
                 </div>
-              </blockquote>
+              </div>
+              <!--/.card-body -->
             </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-        <!--/column -->
-        <div class="item col-md-6 col-xl-4">
-          <div class="card shadow-none rounded-xl bg-soft-leaf">
-            <div class="card-body">
-              <blockquote class="icon mb-0">
-                <p>To provide value, I believe any engineering team should be quick to get clarity on requirements, deliver on time, engage with the stakeholders and deliver according to the requirements. With Acelucid Technologies we have found a team that can provide all with excellent communication skills that made a difference in our delivery.</p>
-                <div class="blockquote-details">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Harshdeep</h5>
-                    <p class="mb-0">General Manager, EMEA</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-			 <a href="https://www.linkedin.com/company/acelucid/" target="_blank" class="btn btn-sm btn-outline-leaf rounded float-end mt-5" >And Many More .....</a>
-        </div>
-        <!--/column -->
-        
-        <!--/column -->
-		 <div class="item col-md-6 col-xl-4">
-          <div class="card shadow-none rounded-xl bg-soft-fuchsia">
-            <div class="card-body">
-              <blockquote class="icon mb-0">
-                <p>I have worked with Acelucid for more than a year to build a one-of a-kind site with a high degree of UI complexity and a lot of moving parts. Almost of the work has required the code to be built from scratch, and the team has been great to work with and relentless in their willingness to solve difficult problems.</p>
-                <div class="blockquote-details">
-                  <div class="info ps-0">
-                    <h5 class="mb-1">Jimmy Mcclements</h5>
-                    <p class="mb-0">Colorado, USA</p>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-		  
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.grid-view -->
-	 
-  </div>
-  <!-- /.container -->
-</section>
-<!-- /section -->
-    <!-- /section -->
-    <section class="wrapper bg-soft-primary">
-      <div class="container pt-14 text-center">
-        <div class="row">
-          <div class="col-lg-12 col-xl-12 mx-auto">
-            <h3 class="display-4 mb-15 mb-md-6 px-lg-10">Dedicated Developers or an Expert Team for End-to-End Development - <span class="text-primary">Choose the Skills You Need.</span></h3>
+            <!--/.card -->
           </div>
           <!--/column -->
-			  <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons" data-delay="600">
-              <span><a class="btn btn-primary rounded mx-1" data-bs-toggle="modal" data-bs-target="#modal-signup">Request For Team Augmentation</a></span>
-              
-            </div>
         </div>
         <!--/.row -->
       </div>
       <!-- /.container -->
     </section>
     <!-- /section -->
-  
-    <!-- /section -->
+<section class="wrapper bg-light" id="our-mission">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-7">
+        <figure><img class="w-auto" src="./assets/img/illustrations/mission.jpg" srcset="./assets/img/illustrations/mission.jpg" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5" >
+		  <h2 class="display-4 mb-3">Our <span class="text-primary">Mission</span></h2>
+            <p class="mb-6">Our mission is to empower businesses and societies to achieve their fullest potential through innovative technology solutions. We believe that the right technology, when thoughtfully applied, can transform industries, elevate user experiences, and create sustainable value for all stakeholders. Whether it's enhancing healthcare accessibility, revolutionizing financial services, or driving efficiencies in manufacturing, our goal remains the same: to make a lasting impact through technology.</p>
+        <!-- /.progress-list -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+	  <section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-7 order-lg-2">
+        <figure><img class="w-auto" src="./assets/img/illustrations/i8.png" srcset="./assets/img/illustrations/i8.png" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+		  <h2 class="display-4 mb-3">Our <span class="text-primary">Culture</span></h2>
+            <p class="mb-6">At Acelucid, we nurture a culture of innovation, diversity, and continuous learning. We understand that great ideas come from everywhere, and we foster an environment where creativity flourishes, and boundaries are pushed. Our team, a dynamic blend of seasoned experts and bright young talent, is the heart of Acelucid. Together, we celebrate our successes, learn from our challenges, and continuously strive to be better.</p>
+        <!--/.accordion -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+	  <section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-md-8 gy-10 align-items-center">
+      <div class="col-lg-6 offset-lg-1 order-lg-2 position-relative">
+        <figure class="rounded"><img class="img-fluid" src="./assets/img/photos/about27.jpg" srcset="./assets/img/photos/about27.jpg" alt="" /></figure>
+        <div class="card shadow-lg position-absolute d-none d-md-block" style="top: 15%; left: -7%">
+          <div class="card-body py-4 px-5">
+            <div class="d-flex flex-row align-items-center">
+              <div>
+                <img src="./assets/img/icons/solid/cloud-group.svg" class="svg-inject icon-svg icon-svg-sm solid-duo text-grape-fuchsia me-3" alt="" />
+                
+              </div>
+              <div>
+                <h3 class="fs-25 counter mb-0 text-nowrap">500+</h3>
+                <p class="fs-16 lh-sm mb-0 text-nowrap">Happy Clients</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+		  <h2 class="display-4 mb-3">Our <span class="text-primary">Solutions</span></h2>
+        <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3"></h2>
+        <p class="mb-6">Our portfolio of solutions spans various industries, each with its tailored approach to address specific challenges and opportunities. Here are just a few examples of how we're making a difference:
+</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i><span class="fs-18 text-primary">Finance and Banking :</span> We developed a blockchain-based payment system that significantly reduces transaction times and costs, enabling a leading bank to offer innovative financial products to its customers.</li>
+          <li><i class="uil uil-check"></i><span class="fs-18 text-primary">Healthcare :</span> Our telehealth platform has connected thousands of patients in remote areas with medical professionals, providing timely access to healthcare services and saving lives.</li>
+          <li><i class="uil uil-check"></i><span class="fs-18 text-primary">Education :</span> We created an AI-driven e-learning platform that adapts to individual learning styles, improving student engagement and outcomes for a network of schools.</li>
+        </ul>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
  
+   <div class="mt-4">
+	   <h2 class="display-4 mb-4">Our <span class="text-primary">Impact</span></h2>
+	  <p>The true measure of our success lies in the impact we've made. From startups to Fortune 500 companies, our clients are at the centre of everything we do. We've helped them navigate the complexities of digital transformation, unlock new opportunities, and achieve unprecedented growth. But beyond the numbers, our impact is seen in the lives we've touched, the communities we've supported, and the positive changes we've fostered in society.</p> </div>
+		  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+<!-- /section -->
+ <section  id="our-team">
+  <div class="container py-14 py-md-16" >
+   <div class="text-center">
+	   <h2 class="display-4 mb-4 px-lg-14">The <span class="text-primary">Minds Behind</span> the Innovation</h2>
+	   <h5>Meet the Visionaries Driving Acelucid Forward</h5>
+	  <p>At the heart of Acelucid Technologies lies our greatest asset: our team. A group of dedicated professionals, visionaries, and innovators, each member plays a pivotal role in driving the company towards new heights of success. From pioneering technology solutions to fostering a culture of excellence and innovation, our team's diverse skills and unwavering dedication are what make us unique. Let's introduce you to the leaders and key players who shape our vision and operations.
+</p> 
+<div class="container mx-auto p-4">
+  <h1 class="text-3xl font-bold text-center mb-6">Our Team</h1>
+  <div class="marquee-container group">
+      <div class="marquee-content">
+          <!-- Updated profiles -->
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Abhishek Saini" class="w-12 h-12 rounded-full" src="assets/img/team/Abhishek.png"/>
+              <div>
+                  <div class="font-bold text-white">Abhishek Saini</div>
+                  <div class="text-sm text-gray-400">CEO</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Akhil Chauhan" class="w-12 h-12 rounded-full" src="assets/img/team/Akhil.jpg"/>
+              <div>
+                  <div class="font-bold text-white">Akhil Chauhan</div>
+                  <div class="text-sm text-gray-400">CTO</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Deepak Porwal" class="w-12 h-12 rounded-full" src="assets/img/team/deepak1.jpg"/>
+              <div>
+                  <div class="font-bold text-white">Deepak Porwal</div>
+                  <div class="text-sm text-gray-400">COO</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex  items-center">
+              <img alt="Profile picture of Lohagirish Narasimappa" class="w-12 h-12 rounded-full" src="assets/img/team/Loha.png"/>
+              <div>
+                  <div class="font-bold text-white">Lohagirish Narasimappa</div>
+                  <div class="text-sm text-gray-400">Co-Founder</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Nikhil Chauhan" class="w-12 h-12 rounded-full" src="assets/img/team/nikhil.jpg"/>
+              <div>
+                  <div class="font-bold text-white">Nikhil Chauhan</div>
+                  <div class="text-sm text-gray-400 ">Technical Lead</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Sagar Panwar" class="w-12 h-12 rounded-full" src="assets/img/team/Sagar.png"/>
+              <div>
+                  <div class="font-bold text-white">Sagar Panwar</div>
+                  <div class="text-sm text-gray-400">Software Engineer</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Teja Banala" class="w-12 h-12 rounded-full" src="assets/img/team/Teja.png"/>
+              <div>
+                  <div class="font-bold text-white">Teja Banala</div>
+                  <div class="text-sm text-gray-400">BDE</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Chinna Kota Reddy Narra" class="w-12 h-12 rounded-full" src="assets/img/team/Chinna.png"/>
+              <div>
+                  <div class="font-bold text-white">Chinna Kota Reddy</div>
+                  <div class="text-sm text-gray-400">Module Lead</div>
+              </div>
+          </a>
+          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+              <img alt="Profile picture of Shivani Tyagi" class="w-12 h-12 rounded-full" src="assets/img/team/Shivani.png"/>
+              <div>
+                  <div class="font-bold text-white">Shivani Tyagi</div>
+                  <div class="text-sm text-gray-400">HR Manager</div>
+              </div>
+          </a>
+          
+      </div>
+  </div>
+</div>
+
+  </div>
+	  <p>Our team at Acelucid Technologies is more than just a group of individuals; we are a family united by a common goal: to innovate, to excel, and to make a difference. Together, we are pushing the boundaries of technology, creating solutions that not only solve today's challenges but also anticipate the needs of tomorrow. Welcome to Acelucid, where innovation, passion, and excellence drive us forward.
+</p>
+    </div>
+    <!--/.row -->
+ 
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
     <!-- /section -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="bg-dark text-inverse mt-5 mt-md-16">
-    <div class="container py-13 py-md-15">
+   <div class="container py-13 py-md-15">
       <div class="row gy-6 gy-lg-0">
         <div class="col-md-4 col-lg-3">
           <div class="widget">
             <img class="mb-4" src="assets/img/logo-white.svg" srcset="./assets/img/logo-white.svg 2x" alt="" width="200"/>
 			  <p>Go beyond conventional boundaries by pioneering value-driven business innovations rooted in our adaptable digital ecosystems, creative designs, and sustainable technological solutions.</p>
 			  <p><i class="uil uil-envelope"></i>&nbsp;hello@acelucid.com</p>
-			  <p><i class="uil uil-phone"></i>&nbsp;+91 7338084881</p>
-			 
-          
-            <nav class="nav social social-white">
+			  <p><i class="uil uil-phone"></i>&nbsp;+91 7338084881</p> <nav class="nav social social-white">
               <a href="https://www.linkedin.com/company/acelucid/" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
               <a href="mailto:hello@acelucid.com" target="_blank"><i class="uil uil-google"></i></a>
 			  <a href="https://www.instagram.com/official_acelucid/" target="_blank"><i class="uil uil-instagram"></i></a>
@@ -905,10 +739,7 @@ body {
 		  <p class="mb-4">Copyright © 2019-2024 Acelucid Technologies Private Limited. All rights reserved.</p>
     </div>
     <!-- /.container -->
-  </footer>
-	<!--Start of Tawk.to Script (0.7.2)-->
-
-<!--End of Tawk.to Script (0.7.2)--><!--Start of Tawk.to Script (0.7.2)-->
+  </footer><!--Start of Tawk.to Script (0.7.2)-->
 <script id="tawk-script" type="text/javascript">
 var Tawk_API = Tawk_API || {};
 var Tawk_LoadStart=new Date();
@@ -927,196 +758,16 @@ var Tawk_LoadStart=new Date();
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
- <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/plugins.js"></script>
   <script src="assets/js/theme.js"></script>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script>
-	(function() {
 
-    var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+<script type='text/javascript' src='team/jquery-1.10.1.min.js'></script>
+	<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 
-    // Main
-    initHeader();
-    initAnimation();
-    addListeners();
-
-    function initHeader() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        target = {x: width/2, y: height/2};
-
-        largeHeader = document.getElementById('large-header');
-        largeHeader.style.height = height+'px';
-
-        canvas = document.getElementById('demo-canvas');
-        canvas.width = width;
-        canvas.height = height;
-        ctx = canvas.getContext('2d');
-
-        // create points
-        points = [];
-        for(var x = 0; x < width; x = x + width/20) {
-            for(var y = 0; y < height; y = y + height/20) {
-                var px = x + Math.random()*width/20;
-                var py = y + Math.random()*height/20;
-                var p = {x: px, originX: px, y: py, originY: py };
-                points.push(p);
-            }
-        }
-
-        // for each point find the 5 closest points
-        for(var i = 0; i < points.length; i++) {
-            var closest = [];
-            var p1 = points[i];
-            for(var j = 0; j < points.length; j++) {
-                var p2 = points[j]
-                if(!(p1 == p2)) {
-                    var placed = false;
-                    for(var k = 0; k < 5; k++) {
-                        if(!placed) {
-                            if(closest[k] == undefined) {
-                                closest[k] = p2;
-                                placed = true;
-                            }
-                        }
-                    }
-
-                    for(var k = 0; k < 5; k++) {
-                        if(!placed) {
-                            if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
-                                closest[k] = p2;
-                                placed = true;
-                            }
-                        }
-                    }
-                }
-            }
-            p1.closest = closest;
-        }
-
-        // assign a circle to each point
-        for(var i in points) {
-            var c = new Circle(points[i], 2+Math.random()*2, 'rgba(255,255,255,0.3)');
-            points[i].circle = c;
-        }
-    }
-
-    // Event handling
-    function addListeners() {
-        if(!('ontouchstart' in window)) {
-            window.addEventListener('mousemove', mouseMove);
-        }
-        window.addEventListener('scroll', scrollCheck);
-        window.addEventListener('resize', resize);
-    }
-
-    function mouseMove(e) {
-        var posx = posy = 0;
-        if (e.pageX || e.pageY) {
-            posx = e.pageX;
-            posy = e.pageY;
-        }
-        else if (e.clientX || e.clientY)    {
-            posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-            posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-        }
-        target.x = posx;
-        target.y = posy;
-    }
-
-    function scrollCheck() {
-        if(document.body.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
-    }
-
-    function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        largeHeader.style.height = height+'px';
-        canvas.width = width;
-        canvas.height = height;
-    }
-
-    // animation
-    function initAnimation() {
-        animate();
-        for(var i in points) {
-            shiftPoint(points[i]);
-        }
-    }
-
-    function animate() {
-        if(animateHeader) {
-            ctx.clearRect(0,0,width,height);
-            for(var i in points) {
-                // detect points in range
-                if(Math.abs(getDistance(target, points[i])) < 4000) {
-                    points[i].active = 0.3;
-                    points[i].circle.active = 0.6;
-                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
-                    points[i].active = 0.1;
-                    points[i].circle.active = 0.3;
-                } else if(Math.abs(getDistance(target, points[i])) < 40000) {
-                    points[i].active = 0.02;
-                    points[i].circle.active = 0.1;
-                } else {
-                    points[i].active = 0;
-                    points[i].circle.active = 0;
-                }
-
-                drawLines(points[i]);
-                points[i].circle.draw();
-            }
-        }
-        requestAnimationFrame(animate);
-    }
-
-    function shiftPoint(p) {
-        TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*100,
-            y: p.originY-50+Math.random()*100, ease:Circ.easeInOut,
-            onComplete: function() {
-                shiftPoint(p);
-            }});
-    }
-
-    // Canvas manipulation
-    function drawLines(p) {
-        if(!p.active) return;
-        for(var i in p.closest) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
-            ctx.stroke();
-        }
-    }
-
-    function Circle(pos,rad,color) {
-        var _this = this;
-
-        // constructor
-        (function() {
-            _this.pos = pos || null;
-            _this.radius = rad || null;
-            _this.color = color || null;
-        })();
-
-        this.draw = function() {
-            if(!_this.active) return;
-            ctx.beginPath();
-            ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
-            ctx.fill();
-        };
-    }
-
-    // Util
-    function getDistance(p1, p2) {
-        return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
-    }
-    
-})();
-	</script>
+<script type='text/javascript' src='team/ajax_nav.js'></script>
+<script type='text/javascript' src='team/gbl_video.js'></script>
+<script type='text/javascript' src='team/team.js'></script>
+	
 	<script>	
 	$("form#connect").submit(function(e) {
 	//	alert("hi");
