@@ -16,39 +16,60 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <style>
     @keyframes marquee-left {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-    
-    .marquee-content {
-        display: flex;
-        width: 200%; /* Double the width to create seamless effect */
-        animation: marquee-left 20s linear infinite;
-    }
-    .marquee-content a {
-        flex: 0 0 auto;
-        margin-right: 1rem; /* Add spacing between items */
-    }
-    .group:hover .marquee-content {
-        animation-play-state: paused;
-    }
-    .marquee-content a {
-flex: 0 0 300px; /* Set a fixed width */
-height: 100px; /* Set a fixed height */
-
-display: flex;
-
-
-
-background: #1f2937; /* Tailwind gray-800 */
-border-radius: 10px;
-padding: 10px;
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content; /* Adjusts width dynamically based on content */
+    animation: marquee-left 20s linear infinite;
+}
+
+.marquee-content a {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    min-width: 200px; /* Allows flexibility for responsiveness */
+    height: 100px;
+    display: flex;
+    background: #1f2937;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .marquee-content a img {
-width: 70px; /* Adjust size */
-height: 70px;
-object-fit: cover;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
 }
+
+.group:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .marquee-content {
+        animation-duration: 15s; /* Faster animation on smaller screens */
+    }
+
+    .marquee-content a {
+        min-width: 150px;
+        height: 80px;
+    }
+
+    .marquee-content a img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 
 </style>
 </head>
