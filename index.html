@@ -69,6 +69,128 @@
         height: 50px;
     }
 }
+@keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+
+.content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+
+.back p {
+    font-style: italic;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+
+
+
+.employee-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.employee-card {
+    width: 200px;
+    height: 260px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.employee-card .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.employee-card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.employee-card .front, .employee-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1f2937;
+    color: white !important;
+    text-align: center;
+    padding: 20px;
+}
+
+.employee-card .back {
+    transform: rotateY(180deg);
+}
+
+.employee-card .back p {
+    font-style: italic;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.employee-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.container h3{
+  color: aliceblue;
+}
+.container h4{
+  color: aliceblue;
+}
 
 
 </style>
@@ -578,37 +700,63 @@
 </p> 
 <div class="container mx-auto p-4">
   <h1 class="text-3xl font-bold text-center mb-6">Our Team</h1>
+  <div class="container mx-auto p-4">
+  <div class="employee-cards">
+    <a href="#" class="employee-card">
+        <div class="content">
+            <div class="front">
+                <img src="assets/img/team/Abhishek.png" alt="Abhishek Saini">
+                <h3>Abhishek Saini</h3>
+                <h4>CEO</h4>
+            </div>
+            <div class="back">
+                <h3>"Leadership is not about titles, but impact."</h3>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="employee-card">
+        <div class="content">
+            <div class="front">
+                <img src="assets/img/team/akhil.jpg" alt="Akhil Chauhan">
+                <h3>Akhil Chauhan</h3>
+                <h4>CTO</h4>
+            </div>
+            <div class="back">
+                <h3>"Innovation distinguishes between a leader and a follower."</h3>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="employee-card">
+        <div class="content">
+            <div class="front">
+                <img src="assets/img/team/deepak1.jpg" alt="Deepak Porwal">
+                <h3>Deepak Porwal</h3>
+                <h4>COO</h4>
+            </div>
+            <div class="back">
+                <h3>"Efficiency is doing better what is already being done."</h3>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="employee-card">
+        <div class="content">
+            <div class="front">
+                <img src="assets/img/team/Loha.png" alt="Lohagirish Narasimappa">
+                <h3>Lohagirish</h3>
+                <h4>Co-Founder</h4>
+            </div>
+            <div class="back">
+                <h3>"Great things in business are never done by one person."</h3>
+            </div>
+        </div>
+    </a>
+</div>
+  </div>
+  
     <div class="marquee-container group">
       <div class="marquee-content">
           <!-- Updated profiles -->
-          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
-              <img alt="Profile picture of Abhishek Saini" class="w-12 h-12 rounded-full" src="assets/img/team/Abhishek.png"/>
-              <div>
-                  <div class="font-bold text-white">Abhishek Saini</div>
-                  <div class="text-sm text-gray-400">CEO</div>
-              </div>
-          </a>
-          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
-              <img alt="Profile picture of Akhil Chauhan" class="w-12 h-12 rounded-full" src="assets/img/team/akhil.jpg"/>
-              <div>
-                  <div class="font-bold text-white">Akhil Chauhan</div>
-                  <div class="text-sm text-gray-400">CTO</div>
-              </div>
-          </a>
-          <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
-              <img alt="Profile picture of Deepak Porwal" class="w-12 h-12 rounded-full" src="assets/img/team/deepak1.jpg"/>
-              <div>
-                  <div class="font-bold text-white">Deepak Porwal</div>
-                  <div class="text-sm text-gray-400">COO</div>
-              </div>
-          </a>
-          <a href="#" class="bg-gray-800 p-4 rounded-lg flex  items-center">
-              <img alt="Profile picture of Lohagirish Narasimappa" class="w-12 h-12 rounded-full" src="assets/img/team/Loha.png"/>
-              <div>
-                  <div class="font-bold text-white">Lohagirish Narasimappa</div>
-                  <div class="text-sm text-gray-400">Co-Founder</div>
-              </div>
-          </a>
+          
           <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
               <img alt="Profile picture of Nikhil Chauhan" class="w-12 h-12 rounded-full" src="assets/img/team/nikhil.jpg"/>
               <div>
@@ -647,10 +795,45 @@
           <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
             <img alt="Profile picture of Anurag" class="w-12 h-12 rounded-full" src="assets/img/team/Anurag.png"/>
             <div>
-                <div class="font-bold text-white">Anuragh</div>
+                <div class="font-bold text-white">Anurag Gariya</div>
                 <div class="text-sm text-gray-400">Full Stack Trainee</div>
             </div>
         </a>
+        <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+          <img alt="Profile picture of Anurag" class="w-12 h-12 rounded-full" src="assets/img/team/Megha.png"/>
+          <div>
+              <div class="font-bold text-white">Megha Pandey</div>
+              <div class="text-sm text-gray-400">UI/UX Trainee</div>
+          </div>
+      </a>
+      <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+        <img alt="Profile picture of Anurag" class="w-12 h-12 rounded-full" src="assets/img/team/Ashish.png"/>
+        <div>
+            <div class="font-bold text-white">Ashish Barthwal</div>
+            <div class="text-sm text-gray-400">Full Stack Trainee</div>
+        </div>
+    </a>
+    <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+      <img alt="Profile picture of Anurag" class="w-12 h-12 rounded-full" src="assets/img/team/Nikita.png"/>
+      <div>
+          <div class="font-bold text-white">Nikita Panwar</div>
+          <div class="text-sm text-gray-400">Full Stack Trainee</div>
+      </div>
+  </a>
+  <a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+    <img alt="Profile picture of Anurag" class="w-12 h-12 rounded-full" src="assets/img/team/Sunaina.png"/>
+    <div>
+        <div class="font-bold text-white">Sunaina Singh</div>
+        <div class="text-sm text-gray-400">Mobile Trainee</div>
+    </div>
+</a>
+<a href="#" class="bg-gray-800 p-4 rounded-lg flex items-center space-x-4">
+  <img alt="Profile picture of Anurag" class="w-12 h-12 rounded-full" src="assets/img/team/SurajB.png"/>
+  <div>
+      <div class="font-bold text-white">Suraj Bhandari</div>
+      <div class="text-sm text-gray-400">Full Stack Trainee</div>
+  </div>
+</a>
           
       </div>
   </div>
