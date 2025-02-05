@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     @keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height: 260px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back p {
+    font-style: italic;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+    color: #ffbb66;
+}
+
+.employee-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.employee-card {
+    width: 200px;
+    height: 260px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.employee-card .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.employee-card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.employee-card .front, .employee-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.employee-card .back {
+    transform: rotateY(180deg);
+}
+
+.employee-card .back p {
+    font-style: italic;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.employee-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="employee-cards">
+        <a href="#" class="employee-card">
+            <div class="content">
+                <div class="front">
+                    <img src="assets/img/team/Abhishek.png" alt="Abhishek Saini">
+                    <h3>Abhishek Saini</h3>
+                    <h4>CEO</h4>
+                </div>
+                <div class="back">
+                    <p>"Leadership is not about titles, but impact."</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="employee-card">
+            <div class="content">
+                <div class="front">
+                    <img src="assets/img/team/akhil.jpg" alt="Akhil Chauhan">
+                    <h3>Akhil Chauhan</h3>
+                    <h4>CTO</h4>
+                </div>
+                <div class="back">
+                    <p>"Innovation distinguishes between a leader and a follower."</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="employee-card">
+            <div class="content">
+                <div class="front">
+                    <img src="assets/img/team/deepak1.jpg" alt="Deepak Porwal">
+                    <h3>Deepak Porwal</h3>
+                    <h4>COO</h4>
+                </div>
+                <div class="back">
+                    <p>"Efficiency is doing better what is already being done."</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="employee-card">
+            <div class="content">
+                <div class="front">
+                    <img src="assets/img/team/Loha.png" alt="Lohagirish Narasimappa">
+                    <h3>Lohagirish Narasimappa</h3>
+                    <h4>Co-Founder</h4>
+                </div>
+                <div class="back">
+                    <p>"Great things in business are never done by one person."</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+</body>
+</html>
